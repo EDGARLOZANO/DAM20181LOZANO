@@ -30,10 +30,10 @@ export class Alumno{
             this.activo=Activo
             this.array=array2; 
             this.alu={
-                "No control":this.no_control,
+                "No_control":this.no_control,
                 "Nombre":this.name,
                 "Apellidos":this.apellidos,
-                "Promedio ":this.promedio,
+                "Promedio":this.promedio,
                 "Genero":this.genero,
                 "Fecha":this.fecha_nac,
                 "Activo":this.activo};
@@ -51,7 +51,17 @@ export class Alumno{
         });
     }
 
-    delete(){
+    delete(control:string){
+          
+          this.array.forEach(element => {
+                    var t:string=element.No_control;
+                  if((control.localeCompare(t))==0){
 
+                    this.array=this.array.filter( num => num.No_control.localeCompare(control));
+                    return console.log("Se elimino con exito: "+control);
+                
+                  }
+        });
+        
     }
 }

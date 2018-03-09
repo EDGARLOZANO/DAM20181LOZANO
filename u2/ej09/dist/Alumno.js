@@ -23,10 +23,10 @@ var Alumno = /** @class */ (function () {
         this.activo = Activo;
         this.array = array2;
         this.alu = {
-            "No control": this.no_control,
+            "No_control": this.no_control,
             "Nombre": this.name,
             "Apellidos": this.apellidos,
-            "Promedio ": this.promedio,
+            "Promedio": this.promedio,
             "Genero": this.genero,
             "Fecha": this.fecha_nac,
             "Activo": this.activo
@@ -40,7 +40,15 @@ var Alumno = /** @class */ (function () {
             console.log(element);
         });
     };
-    Alumno.prototype.delete = function () {
+    Alumno.prototype.delete = function (control) {
+        var _this = this;
+        this.array.forEach(function (element) {
+            var t = element.No_control;
+            if ((control.localeCompare(t)) == 0) {
+                _this.array = _this.array.filter(function (num) { return num.No_control.localeCompare(control); });
+                return console.log("Se elimino con exito: " + control);
+            }
+        });
     };
     return Alumno;
 }());
