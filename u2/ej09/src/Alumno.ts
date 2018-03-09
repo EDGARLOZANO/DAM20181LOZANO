@@ -62,6 +62,14 @@ export class Alumno{
                 
                   }
         });
-        
-    }
+        }
+
+    update(NoControl:string,Name:string,Apellidos:string,Promedio:number=0,
+    Genero:string,Fecha:string,Activo:boolean){
+        this.delete(NoControl)
+        this.insert(NoControl,Name,Apellidos,Promedio,
+            Genero,Fecha,Activo,this.array)
+            
+
+    }    
 }
