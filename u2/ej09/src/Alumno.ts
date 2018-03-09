@@ -37,20 +37,20 @@ export class Alumno{
                 "Genero":this.genero,
                 "Fecha":this.fecha_nac,
                 "Activo":this.activo};
-                
-                    
-                
-        this.array.push(this.alu);
-
-            
-        console.log("Se inserto con Exito: "+this.no_control);
+        
+                this.array.push(this.alu);
+        
+                console.log("Se inserto con Exito: "+this.no_control);
             
     }
+
     read(){
+        console.log("Alumnos");
         this.array.forEach(element => {
             console.log(element);
         });
     }
+
     delete(){
 
     }

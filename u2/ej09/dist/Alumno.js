@@ -35,6 +35,7 @@ var Alumno = /** @class */ (function () {
         console.log("Se inserto con Exito: " + this.no_control);
     };
     Alumno.prototype.read = function () {
+        console.log("Alumnos");
         this.array.forEach(function (element) {
             console.log(element);
         });
